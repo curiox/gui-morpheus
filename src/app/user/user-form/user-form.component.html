@@ -1,0 +1,17 @@
+<h1>Adicionar usuário</h1>
+<form [formGroup]="userForm" (ngSubmit)="save()" novalidate>
+  <div class="row">
+    <div class="col-md-6">
+      <label>Nome do Usuário</label>
+      <input type="text" class="form-control" formControlName="nome" autocomplete="off">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <button type="submit">Salvar</button>
+    </div>
+    <div class="col-md-4">
+      <button type="button" (click)="cancel()">Cancelar</button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <button class="btn-outline-primary btn" (click)="addUser()">Adicionar usuario</button>
+  </div>
+  <div class="row">
+    <input type="text" (keyup)="updateFilter(filterUsers.value)" #filterUsers placeholder="Filtrar usuarios">
+    <button (click)="clearFilter()">Limpar pesquisa</button>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="table-responsive-md">
+        <table id="mytable" class="table table-striped table-hover dt-responsive nowrap">
+          <thead>
+            <tr>
+              <th (click)="searchUsers()">Usuario</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users; let i = index">
+              <td>{{user.nome}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
